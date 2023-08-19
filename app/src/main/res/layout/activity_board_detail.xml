@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.Board.Detail.BoardDetail">
+
+    <RelativeLayout
+        android:id="@+id/boardCheck_top"
+        android:layout_width="match_parent"
+        android:background="#ff9424"
+        android:layout_height="60dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/add_login_cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/board_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="게시물"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/boardCheck_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boardCheck_top">
+
+        <!--        <androidx.fragment.app.FragmentContainerView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_marginLeft="15dp"-->
+        <!--            android:layout_marginTop="15dp"-->
+        <!--            android:layout_marginRight="15dp"-->
+        <!--            android:layout_marginBottom="15dp">-->
+        <!--        </androidx.fragment.app.FragmentContainerView>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/roundgirl2"
+            android:id="@+id/board_detail_profile">
+        <ImageView
+            android:id="@+id/boardCheck_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/boradCheck_nickname"
+            android:background="@drawable/post_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/medium_dark_gray"
+            android:textSize="18sp"
+            android:fontFamily="@font/tmoney"
+            android:hint=""
+            android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ddddd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/board_detail_profile">
+        <TextView
+            android:id="@+id/boradCheck_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tmoney"
+            android:hint=""
+            android:maxWidth="380dp"
+            android:maxLength="29"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/main"/>
+            <TextView
+                android:id="@+id/boradCheck_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:fontFamily="@font/tmoney"
+                android:hint=""
+                android:textSize="5pt" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/boardCheck_contents"
+            android:layout_width="380dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/ddddd"
+            android:layout_marginStart= "15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:padding ="12dp"
+            android:maxWidth="360dp"
+            android:maxLength="500"
+            android:background="@drawable/roundgirl2"
+            android:fontFamily="@font/tmoney"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/boardCheck_contents"
+            android:layout_alignStart="@+id/boardCheck_contents"
+            android:layout_marginStart="245dp">
+
+            <LinearLayout
+                android:id="@+id/like_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/BoardCheck_like"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/favorite_border" />
+                <TextView
+                    android:id="@+id/board_likeCount"
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
+                    android:fontFamily="@font/tmoney"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/comment_count"
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/BoardCheck_commend"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/chat" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/boardCheck_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_below="@+id/boardCheck_center"
+        android:layout_marginTop="1dp"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/boardCheck_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/board_explain"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/tmoney"
+            android:layout_marginEnd="15dp"
+            android:hint="사진 설명" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/open_chat"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/boardCheck_center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_gravity = "center"
+        android:background="#FDAC58"
+        android:textColor="@color/black"
+        android:text="친구에게 좋아요 혹은 댓글을 달아주세요!"
+        android:textSize="18sp" />
+
+
+
+</RelativeLayout>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="main">#ff9424</color>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#D81B60</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,4 +12,41 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="kakao"></color>
+    <color name="menu_character_color">#C8C9CA</color>
+
+    <color name="strong_red">#FF0101</color>
+    <color name="medium_red">#FF3636</color>
+    <color name="little_red">#FFA6A6</color>
+    <color name="very_little_red">#FFCFCF</color>
+
+    <color name="strong_dark_red">#650303</color>
+    <color name="medium_dark_red">#810707</color>
+    <color name="little_dark_red">#F15C5C</color>
+
+    <color name="strong_gray">#2E302E</color>
+    <color name="medium_gray">#434141</color>
+    <color name="little_gray">#6A6767</color>
+    <color name="very_little_gray">#AEACAC</color>
+
+    <color name="strong_dark_gray">#292929</color>
+    <color name="medium_dark_gray">#333333</color>
+    <color name="little_dark_gray">#535353</color>
+    <color name="light_gray">#989595</color>
+
+    <color name="strong_yellow">#E1CA01</color>
+    <color name="medium_yellow">#F6E97D</color>
+    <color name="little_yellow">#F3ECBB</color>
+
+    <color name="strong_blue">#0241FF</color>
+    <color name="medium_blue">#2357DC</color>
+    <color name="little_blue">#88A2E3</color>
+
+    <color name="strong_deep_blue">#00237E</color>
+    <color name="medium_deep_blue">#11397C</color>
+    <color name="little_deep_blue">#475C91</color>
+
+    <color name="strong_green">#00FF0A</color>
+    <color name="medium_green">#89CD39</color>
+    <color name="little_green">#CAE6A9</color>
 </resources>

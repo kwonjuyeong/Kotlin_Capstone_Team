@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="imageview1">안녕하세요</string>
+    <string name="main_page">Main page</string>
+    <string name="imageb1">TODO</string>
+    <string name="category">Category</string>
+    <string name="desc">Desc</string>
+    <string name="title">Title</string>
+    <string name="todo">TODO</string>
+
+    <!--카카오 native Key-->
+    <string name="kakao_app_key">3da70c39cd53659cbfbf903ffd33273b</string>
+    <!--    <string name=""default_web_client_id>375254490249-dj1mu3rp7mstcts3gnlbs48ngco7g8m9.apps.googleusercontent.com</string>-->
+
+    <!--페이스북 key-->
+    <string name="facebook_app_id">267484831855506</string>
+    <string name="fb_login_protocol_scheme">fb267484831855506</string>
+    <string name="facebookloginb">facebook</string>
+    <string name="togethertext">함께</string>
+    <string name="password">Password</string>
+    <string name="loginbtn">로그인</string>
+    <string name="sendVerificationCodeButton">인증하기</string>
+    <string name="phoneNumberInput">01012345678</string>
+    <string name="add_login_text">회원가입</string>
+    <string name="title_activity_google_maps">Map</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

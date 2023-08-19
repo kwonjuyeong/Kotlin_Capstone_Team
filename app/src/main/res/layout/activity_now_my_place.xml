@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Main.Fragment.MapFragment.MapFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/navibar_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="주변 친구"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/recent_button"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/signiture_btn"
+                android:text="내 위치"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/current_top"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="5dp"
+            android:background="#ff9424"
+            app:layout_constraintTop_toBottomOf="@id/recent_button" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/realtime_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_alignParentBottom="true">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    app:cardBackgroundColor="#F3EEC7"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="상세 정보"
+                            android:textColor="#000000"
+                            android:background="@drawable/signiture_btn_with_nostrike"
+                            android:textSize="9pt"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="55dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="16dp"
+                                android:text="닉네임 :   "
+                                android:textColor="#000000"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/board_nickname"
+                                android:layout_width="290dp"
+                                android:layout_height="20dp"
+                                android:text="갱신 전"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="55dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="16dp"
+                                android:text="성별 : "
+                                android:textColor="#000000"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/board_gender"
+                                android:layout_width="90dp"
+                                android:layout_height="20dp"
+                                android:text="갱신 전"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="16dp"
+                                android:text="현재 위치 :  "
+                                android:textColor="#000000"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/board_locate"
+                                android:layout_width="100dp"
+                                android:layout_height="20dp"
+                                android:text="갱신 전"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <View
+                            android:id="@+id/detail_board_top"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="#ff9424"
+                            app:layout_constraintTop_toBottomOf="@id/recent_button" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="16dp"
+                                android:text="제목 :     "
+                                android:textColor="#000000"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/board_title"
+                                android:layout_width="290dp"
+                                android:layout_height="20dp"
+                                android:text="갱신 전"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="-5dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="16dp"
+                                android:text="시간     :        "
+                                android:textColor="@color/little_dark_gray"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/board_time"
+                                android:layout_width="290dp"
+                                android:layout_height="20dp"
+                                android:text="갱신 전"
+                                android:textColor="@color/little_dark_gray"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="-5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="55dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="16dp"
+                                android:text="내용 : "
+                                android:textColor="#000000"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/board_contents"
+                                android:layout_width="330dp"
+                                android:layout_height="20dp"
+                                android:text="갱신 전"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/MapIntentUID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:visibility="gone"/>
+                            <TextView
+                                android:id="@+id/ownerUID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:visibility="gone"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/board_move_button"
+                        android:layout_width="80dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/signiture_btn"
+                        android:gravity="center"
+                        android:text="이동" />
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

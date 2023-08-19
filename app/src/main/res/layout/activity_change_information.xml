@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id = "@id/board_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        tools:ignore="MissingConstraints">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/board_cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_signiture" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/board_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="정보 변경"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/boardCheck_top"
+            android:layout_width="300dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="#ff9424"
+            android:layout_below="@+id/board_text"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/signiture_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inform_change_password" />
+    <LinearLayout
+        android:id="@+id/inform_first"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inform_phone_auth">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/jalnan"
+            android:textColor="@color/black"
+            android:text="미정" />
+
+        <EditText
+            android:id="@+id/textView11"
+            android:layout_width="210dp"
+            android:fontFamily="@font/tmoney"
+            android:layout_height="match_parent"
+            android:hint="내용을 입력하세요" />
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:text = "변경"
+            android:background="@drawable/signiture_btn" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/inform_phone_auth"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <TextView
+            android:id="@+id/textview23"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:fontFamily="@font/jalnan"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="폰번호 인증" />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:text = "인증받기"
+            android:background="@drawable/signiture_btn" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:text = "인증되지 않음"
+            android:fontFamily="@font/tmoney"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inform_change_place"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inform_first">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/jalnan"
+            android:text="주소" />
+
+        <EditText
+            android:id="@+id/textView14"
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/tmoney"
+            android:hint="주소를 입력해주세요" />
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:text = "변경"
+            android:background="@drawable/signiture_btn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inform_change_password"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inform_change_place">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/jalnan"
+            android:text="비밀번호" />
+
+        <EditText
+            android:id="@+id/textView16"
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/tmoney"
+            android:hint="비밀번호를 변경하세요" />
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:text = "변경"
+            android:background="@drawable/signiture_btn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="380dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/board_layout">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:srcCompat="@drawable/basic_profile" />
+
+        <EditText
+            android:id="@+id/textView3"
+            android:layout_width="270dp"
+            android:layout_height="100dp"
+            android:fontFamily="@font/tmoney"
+            android:gravity="bottom"
+            android:hint="한줄 자기소개를 적어주세요." />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="55dp"
+        android:text="모두채워 주세요"
+        android:textColor="#ffff0000"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inform_change_password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

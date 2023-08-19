@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:context=".Main.Board.BoardPost">
+
+        <RelativeLayout
+            android:id="@id/board_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/board_cancel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back_signiture" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/board_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="게시글 작성"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/boardCheck_top"
+                android:layout_width="300dp"
+                android:layout_height="5dp"
+                android:layout_below="@+id/board_text"
+                android:layout_centerHorizontal="true"
+                android:background="#ff9424" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/board_center"
+            android:layout_width="match_parent"
+            android:layout_height="630dp"
+            android:layout_below="@+id/board_layout"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/board_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/jalnan"
+                android:text="제목"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boardCheck_top" />
+
+            <EditText
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:background="@null"
+                android:fontFamily="@font/tmoney"
+                android:hint="제목을 입력해주세요."
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/boardCheck_center"
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="20dp"
+                android:background="#F3EFD2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".MainActivity">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/decrement_month"
+                    android:layout_width="30dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/arrow_left"
+                    app:layout_constraintBottom_toBottomOf="@+id/tag_list"
+                    app:layout_constraintEnd_toStartOf="@+id/tag_list"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tag_list" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tag_list"
+                    app:layout_constraintEnd_toEndOf="@+id/tag_list"
+                    app:layout_constraintStart_toStartOf="@+id/tag_list"
+                    app:layout_constraintTop_toTopOf="@+id/tag_list"
+                    app:srcCompat="@drawable/tag_gradient" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tag_list"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toStartOf="@+id/increment_month"
+                    app:layout_constraintStart_toEndOf="@+id/decrement_month"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/increment_month"
+                    android:layout_width="30dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/arrow_left"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="@+id/tag_list"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tag_list"
+                    app:layout_constraintTop_toTopOf="@+id/tag_list" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/board_contents_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/jalnan"
+                android:text="내용"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/boardCheck_center" />
+
+            <EditText
+                android:id="@+id/board_context"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/roundgirl2"
+                android:fontFamily="@font/tmoney"
+                android:gravity="top"
+                android:hint="내용을 입력해주세요.(500자 내)"
+                android:padding="10dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/post_image"
+                android:layout_width="130dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/jalnan"
+                android:gravity="right"
+                android:text="사진을 등록하세요"
+                android:textColor="@color/very_little_gray"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/upload_BoardImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="345dp"
+                android:layout_marginTop="-25dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_baseline_photo_camera_24"
+                app:layout_constraintStart_toStartOf="@id/title_text"
+                app:layout_constraintTop_toTopOf="@id/title_text" />
+
+            <LinearLayout
+                android:id="@+id/hide_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/layout_imageUrlWrite"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/roundgirl2" />
+
+                <EditText
+                    android:id="@+id/imgaeExplain"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@null"
+                    android:fontFamily="@font/tmoney"
+                    android:gravity="top"
+                    android:hint="사진 설명을 넣을 수 있어요"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/board_center"
+            android:orientation="horizontal"
+            android:windowSoftInputMode="adjustResize">
+
+            <Button
+                android:id="@+id/btn_write"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="280dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/signiture_btn_with_nostrike"
+                android:gravity="center"
+                android:text="완료" />
+
+        </LinearLayout>
+
+
+        <!--하단 뷰-->
+
+    </RelativeLayout>
+</ScrollView>

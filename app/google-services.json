@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "375254490249",
+    "firebase_url": "https://capston-e8850-default-rtdb.firebaseio.com",
     "project_id": "capston-e8850",
     "storage_bucket": "capston-e8850.appspot.com"
   },
@@ -14,47 +15,18 @@
       },
       "oauth_client": [
         {
+          "client_id": "375254490249-icabqhif9bo8ph8jcmssmbbkvras319d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "c7ba91a109e3c1f8633633399c1ddb7384a2774d"
+          }
+        },
+        {
           "client_id": "375254490249-s5ap8j928dl4929d0vvvulscfg5aqk4u.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.myapplication",
-            "certificate_hash": "cc235b8f86c682daafd7ae954de2b6cce8e76c73"
-          }
-        },
-        {
-          "client_id": "375254490249-dj1mu3rp7mstcts3gnlbs48ngco7g8m9.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyALE_hTYod8DW8vBVj-RP20cAIxyE4Tew0"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "375254490249-dj1mu3rp7mstcts3gnlbs48ngco7g8m9.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:375254490249:android:f66c616fdb703da492ba58",
-        "android_client_info": {
-          "package_name": "com.example.mycapston"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "375254490249-9lu7sl9i3d8j7d1h68s0qsdv0642pjcv.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.mycapston",
             "certificate_hash": "cc235b8f86c682daafd7ae954de2b6cce8e76c73"
           }
         },

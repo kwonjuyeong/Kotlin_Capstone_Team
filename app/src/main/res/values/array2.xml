@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="itemList">
+        <item>선택안함</item>
+        <item>치킨</item>
+        <item>피자</item>
+        <item>초밥</item>
+    </string-array>
+
+</resources>
